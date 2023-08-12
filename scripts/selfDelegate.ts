@@ -25,7 +25,7 @@ async function main() {
   const tokenContract = tokenContractFactory.attach("<TOKEN ADDRESS GOES HERE>") as MyToken;
 
   // Check the voting power
-  const votes = await tokenContract.getVotes(signer.address);
+  const votes = await ballotContract.votingPower(signer.address);
   console.log(`Account ${signer.address} has ${votes.toString()} units of voting power before self delegating\n`);
 
   // Self delegate
@@ -33,13 +33,12 @@ async function main() {
   await delegateTx.wait();
 
   // Return the voting power after delegation
-  const votesAfter = await tokenContract.getVotes(signer.address);
+  const votesAfter = await ballotContract.votingPower(signer.address);
   console.log(`Account ${signer.address} has ${votesAfter.toString()} units of voting power after self delegating\n`);
 
 
 }
     
-
 
 main().catch((error) => {
   console.error(error);
