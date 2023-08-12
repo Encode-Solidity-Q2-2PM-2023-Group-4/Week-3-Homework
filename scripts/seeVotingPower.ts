@@ -25,7 +25,7 @@ async function main() {
   const tokenContract = tokenContractFactory.attach("<TOKEN ADDRESS GOES HERE>") as MyToken;
 
   // Check the voting power
-  const votes = await tokenContract.getVotes(signer.address);
+  const votes = await ballotContract.votingPower(signer.address);
   console.log(`Account ${signer.address} has ${votes.toString()} units of voting power.\n`);
 
 }
