@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import * as dotenv from "dotenv";
-import * as BallotJSON from "../artifacts/contracts/TokenizedBallot.sol/Ballot.json";
+import * as BallotJSON from "../artifacts/contracts/TokenizedBallot.sol/TokenizedBallot.json";
 dotenv.config();
 
 function setupProvider(){
