@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import { MyToken, MyToken__factory } from "../typechain-types";
 import * as dotenv from "dotenv";
-import * as BallotJSON from "../artifacts/contracts/TokenizedBallot.sol/Ballot.json";
+import * as BallotJSON from "../artifacts/contracts/TokenizedBallot.sol/TokenizedBallot.json";
 import * as TokenJSON from "../artifacts/contracts/ERC20Votes.sol/MyToken.json";
 dotenv.config();
 
