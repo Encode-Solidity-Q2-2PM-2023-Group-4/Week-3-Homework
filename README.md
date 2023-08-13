@@ -1,13 +1,17 @@
-# Sample Hardhat Project
+# Week 3 Homework
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This week, we were tasked with editing a tokenized ballot contract in solidity and deploying both the voting token and ballot contracts with TypeScript. Once these contracts were deployed, we had to mint a/some voting token(s), transfer them between ourselves and vote. After this had been done, we could check the outcome of the ballot.
 
-Try running some of the following tasks:
+## Timeline
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+### Token Deployment
+
+### Token Minting
+
+### Token Transfer
+
+### Ballot Deployment
+
+### Voting
+
+### Winning Proposal
