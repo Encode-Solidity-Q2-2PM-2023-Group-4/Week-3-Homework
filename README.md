@@ -51,7 +51,7 @@ https://sepolia.etherscan.io/tx/0xfff0e9d2f816278e28430dc7cdf0c3abba554f35c8d9bc
 
 ### Winning Proposal
 
-[`winnerName.ts`](scripts/winnerName.ts) could be called with ease after all votes (of 1400000000000000 decimal units) were placed (including one erroneous vote from a test):
+[`winnerName.ts`](scripts/winnerName.ts) could be called with ease after all votes (of 1400000000000000 decimal units) were placed (including one erroneous vote and a few other decimal testings):
 
 ![image](https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/38251144/f98d4bb1-ee5b-41a7-8f64-4424072b6d6a)
 
