@@ -19,9 +19,8 @@ async function main() {
   const signer = wallet.connect(provider);
     
   // Attach
-  const ballotContract = new ethers.Contract("<BALLOT ADDRESS GOES HERE>", BallotJSON.abi, signer);
   const tokenContractFactory = new MyToken__factory(signer);
-  const tokenContract = tokenContractFactory.attach("<TOKEN ADDRESS GOES HERE>") as MyToken;
+  const tokenContract = tokenContractFactory.attach("0x8A41E75FCa1427d313A75dE58C3739873E7175C3") as MyToken;
 
   // Mint some tokens
   const mintTx = await tokenContract.mint(signer.address, MINT_VALUE);
