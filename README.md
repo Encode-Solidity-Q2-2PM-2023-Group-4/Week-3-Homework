@@ -45,8 +45,8 @@ Next we submitted our votes - here we realised that the voting power was given i
 
 ### Appendix: Tests
 
-#### Voting before delegation
+#### Voting power before delegation
 
-### Voting power before delegation
+When checking voting power before self-delegating we were hit with the expected error:
 
-
+<img width="519" alt="voting_power_before_delegation" src="https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/96599839/5438aca6-ba27-4f2f-a518-9e82e84b15fa">
