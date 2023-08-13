@@ -20,7 +20,7 @@ async function main() {
   }
   
   // creating a contract instance from the deployed contract address and relevant abi and signer
-  const ballotContract = new ethers.Contract("<BALLOT CONTRACT ADDRESS HERE>", BallotJSON.abi, signer);
+  const ballotContract = new ethers.Contract(process.env.BALLOT_ADDRESS ?? "", BallotJSON.abi, signer);
 
   // finds the index of the winning proposal
   const doWeHaveAWinner = await ballotContract.winningProposal();

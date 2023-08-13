@@ -20,7 +20,7 @@ async function main() {
         throw new Error("Not enough ether");
     }
 
-    const contract = new ethers.Contract("<BALLOT ADDRESS GOES HERE>", BallotJSON.abi, signer);
+    const contract = new ethers.Contract(process.env.BALLOT_ADDRESS ?? "", BallotJSON.abi, signer);
     const proposals = contract.proposals;
     console.log("PROPOSAL: VOTE_COUNT")
     for (let i = 0; i < 8; i++){

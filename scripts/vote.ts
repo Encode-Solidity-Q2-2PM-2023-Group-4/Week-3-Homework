@@ -10,7 +10,7 @@ function setupProvider() {
 
 async function main() {
   // the contract address needs to be hard-coded or inlcuded as the third argument in the comman line  
-  const ballot_contract_address = "....";
+  const ballot_contract_address = process.env.BALLOT_ADDRESS ?? "";
   // proposal index is the first argument in the command line 
   const proposal_id = process.argv[2];
   // the voting power to spend is the second argument in the command line 

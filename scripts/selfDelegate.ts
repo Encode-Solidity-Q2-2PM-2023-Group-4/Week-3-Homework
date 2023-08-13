@@ -19,7 +19,7 @@ async function main() {
   const signer = wallet.connect(provider);
 
   // Attach
-  const ballotContract = new ethers.Contract("<BALLOT ADDRESS GOES HERE>", BallotJSON.abi, signer);
+  const ballotContract = new ethers.Contract(process.env.BALLOT_ADDRESS ?? "", BallotJSON.abi, signer);
   const tokenContractFactory = new MyToken__factory(signer);
   const tokenContract = tokenContractFactory.attach(process.env.VOTING_TOKEN_ADDRESS ?? "") as MyToken;
 
