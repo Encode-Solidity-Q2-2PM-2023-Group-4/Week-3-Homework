@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import * as BallotJSON from "../artifacts/contracts/Ballot.sol/Ballot.json"
+import * as BallotJSON from "../artifacts/contracts/TokenizedBallot.sol/TokenizedBallot.json"
 import * as dotenv from 'dotenv';
 dotenv.config();
 
@@ -14,7 +14,7 @@ async function main() {
   // proposal index is the first argument in the command line 
   const proposal_id = process.argv[2];
   // the voting power to spend is the second argument in the command line 
-  const amount = process.argv[3]
+  const amount = Number(process.argv[3])
   
   if (amount < 0) {
     throw new Error("Casting a negative vote. Do not decrease the vote count !")
