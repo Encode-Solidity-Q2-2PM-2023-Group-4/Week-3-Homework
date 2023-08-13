@@ -41,9 +41,17 @@ Next we submitted our votes - here we realised that the voting power was given i
 
 <img width="736" alt="Screenshot 2023-08-13 at 19 10 10" src="https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/96599839/1a1ba13b-2ed4-4ad7-ba41-c643326d0cfc">
 
+After realising this, we made small voting power transactions. Again, this would have been an easy fix had we spotted it sooner.
+
 ### Winning Proposal
 
+[`winnerName.ts](scripts/winnerName.ts) could be called with ease after all votes (of 1400000000000000 decimal units) were placed (including one erroneous vote from a test):
+
+***INSERT SCREENSHOT OF WINNERNAME.TS OUTPUT HERE]]]
+
 ### Appendix: Tests
+
+A number of errors were tested throughout the process, although not all were recorded effectively. When attempting to vote pre-delegation, we were struck with errors saying that we had no voting power, and when attempting to vote with more power we had we received an error saying we did not have enough voting power, just as in the previous case.
 
 #### Voting power before delegation
 
