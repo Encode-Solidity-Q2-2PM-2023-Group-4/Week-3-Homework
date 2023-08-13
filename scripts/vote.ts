@@ -10,7 +10,7 @@ function setupProvider() {
 
 async function main() {
   // the contract address needs to be hard-coded or inlcuded as the third argument in the comman line  
-  const contract_address = "....";
+  const ballot_contract_address = "....";
   // proposal index is the first argument in the command line 
   const proposal_id = process.argv[2];
   // the voting power to spend is the second argument in the command line 
@@ -30,7 +30,7 @@ async function main() {
     throw new Error("Not enough ether")
   }
 
-  const ballotContract = new ethers.Contract(contract_address, BallotJSON.abi, signer);
+  const ballotContract = new ethers.Contract(ballot_contract_address, BallotJSON.abi, signer);
   
   // call the Solidity's vote function
   await ballotContract.vote(proposal_id, amount);

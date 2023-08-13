@@ -2,7 +2,6 @@ import { ethers } from "ethers";
 import { MyToken, MyToken__factory } from "../typechain-types";
 import * as dotenv from "dotenv";
 import * as BallotJSON from "../artifacts/contracts/TokenizedBallot.sol/TokenizedBallot.json";
-import * as TokenJSON from "../artifacts/contracts/ERC20Votes.sol/MyToken.json";
 dotenv.config();
 
 const MINT_VALUE = ethers.parseUnits("1");
@@ -22,7 +21,7 @@ async function main() {
   // Attach
   const ballotContract = new ethers.Contract("<BALLOT ADDRESS GOES HERE>", BallotJSON.abi, signer);
   const tokenContractFactory = new MyToken__factory(signer);
-  const tokenContract = tokenContractFactory.attach("<TOKEN ADDRESS GOES HERE>") as MyToken;
+  const tokenContract = tokenContractFactory.attach(process.env.VOTING_TOKEN_ADDRESS ?? "") as MyToken;
 
   // Check the voting power
   const votes = await ballotContract.votingPower(signer.address);

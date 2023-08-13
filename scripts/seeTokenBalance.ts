@@ -21,7 +21,7 @@ async function main() {
   // Attach
   const ballotContract = new ethers.Contract("<BALLOT ADDRESS GOES HERE>", BallotJSON.abi, signer);
   const tokenContractFactory = new MyToken__factory(signer);
-  const tokenContract = tokenContractFactory.attach("<TOKEN ADDRESS GOES HERE>") as MyToken;
+  const tokenContract = tokenContractFactory.attach(process.env.VOTING_TOKEN_ADDRESS ?? "") as MyToken;
 
   // Check balances and return value
   const balanceBN = await tokenContract.balanceOf(signer.address);

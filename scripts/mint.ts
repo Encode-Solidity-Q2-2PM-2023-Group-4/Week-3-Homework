@@ -20,7 +20,7 @@ async function main() {
     
   // Attach
   const tokenContractFactory = new MyToken__factory(signer);
-  const tokenContract = tokenContractFactory.attach("0x8A41E75FCa1427d313A75dE58C3739873E7175C3") as MyToken;
+  const tokenContract = tokenContractFactory.attach(process.env.VOTING_TOKEN_ADDRESS ?? "") as MyToken;
 
   // Mint some tokens
   const mintTx = await tokenContract.mint(signer.address, MINT_VALUE);
