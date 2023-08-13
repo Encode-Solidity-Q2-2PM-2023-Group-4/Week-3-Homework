@@ -43,6 +43,12 @@ Next we submitted our votes - here we realised that the voting power was given i
 
 After realising this, we made small voting power transactions. Again, this would have been an easy fix had we spotted it sooner.
 
+Example Voting txs:
+https://sepolia.etherscan.io/tx/0x728b26de4158b653d66dee0201ea8dc6d642a355bde2556ab248c7f38534034c
+https://sepolia.etherscan.io/tx/0xfff0e9d2f816278e28430dc7cdf0c3abba554f35c8d9bc58938222e377b80817
+https://sepolia.etherscan.io/tx/0xfff0e9d2f816278e28430dc7cdf0c3abba554f35c8d9bc58938222e377b80817
+
+
 ### Winning Proposal
 
 [`winnerName.ts`](scripts/winnerName.ts) could be called with ease after all votes (of 1400000000000000 decimal units) were placed (including one erroneous vote from a test):
