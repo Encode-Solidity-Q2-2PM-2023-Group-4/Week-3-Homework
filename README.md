@@ -23,6 +23,8 @@ Then, one VoteToken (VTK) was minted by the deployer in transaction hash [0xcea.
 
 ### Ballot Deployment
 
+### Self-delegation
+
 ### Voting
 
 ### Winning Proposal
