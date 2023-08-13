@@ -2,9 +2,9 @@
 
 This week, we were tasked with editing a tokenized ballot contract in solidity and deploying both the voting token and ballot contracts with TypeScript. Once these contracts were deployed, we had to mint a/some voting token(s), transfer them between ourselves and vote. After this had been done, we could check the outcome of the ballot. Task completed by:
 
-Nanda Girish: [0xc3E...038](https://sepolia.etherscan.io/address/0xc3Ef2b9e4D9EAa4Efa28919213959CdD7E86B038)
-Linus Kelsey: [0xa65...150](https://sepolia.etherscan.io/address/0xa65b289a1F8AFA8105133523F0B912c6D5Fc1150)
-Antony Siahaan: [0x1Cf...a31](https://sepolia.etherscan.io/address/0x1Cf2ed52a7E6b4E8254f55624c85ed5958308a31)
+Nanda Girish: [0xc3E...038](https://sepolia.etherscan.io/address/0xc3Ef2b9e4D9EAa4Efa28919213959CdD7E86B038)                                                                                                    
+Linus Kelsey: [0xa65...150](https://sepolia.etherscan.io/address/0xa65b289a1F8AFA8105133523F0B912c6D5Fc1150)                                                                                                    
+Antony Siahaan: [0x1Cf...a31](https://sepolia.etherscan.io/address/0x1Cf2ed52a7E6b4E8254f55624c85ed5958308a31)                                                                                                  
 Adam Czopp: [0xbe1...df4](https://sepolia.etherscan.io/address/0xbe124408de4a263d0e746e9db41744f66c3e5df4)
 
 ## Timeline
