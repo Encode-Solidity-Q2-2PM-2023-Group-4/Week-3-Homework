@@ -14,7 +14,7 @@ function setupProvider(){
 
 async function main() {
   // Read destination address specified when calling the script
-  const addressTo = process.argv.slice(2);
+  const addressTo = process.argv[2];
   // Define provider and wallet
   const provider = setupProvider();
   const wallet = new ethers.Wallet(process.env.PRIVATE_KEY ?? "", provider);
