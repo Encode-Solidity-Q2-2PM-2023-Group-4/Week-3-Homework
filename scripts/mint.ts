@@ -25,9 +25,9 @@ async function main() {
   // Mint some tokens
   const mintTx = await tokenContract.mint(signer.address, MINT_VALUE);
   await mintTx.wait();
-  console.log(`Minted ${MINT_VALUE.toString()} decimal units to account ${signer.address}\n`);
+  console.log(`Minted ${MINT_VALUE.toString()} decimal units to account ${signer.address}.\n`);
   const balanceBN = await tokenContract.balanceOf(signer.address);  
-  console.log(`Account ${signer.address} has ${balanceBN.toString()} decimal units of MyToken\n`);
+  console.log(`Account ${signer.address} has ${balanceBN.toString()} decimal units of VoteToken.\n`);
 }
 
 main().catch((error) => {
