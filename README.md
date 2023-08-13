@@ -45,7 +45,7 @@ After realising this, we made small voting power transactions. Again, this would
 
 ### Winning Proposal
 
-[`winnerName.ts](scripts/winnerName.ts) could be called with ease after all votes (of 1400000000000000 decimal units) were placed (including one erroneous vote from a test):
+[`winnerName.ts`](scripts/winnerName.ts) could be called with ease after all votes (of 1400000000000000 decimal units) were placed (including one erroneous vote from a test):
 
 ***INSERT SCREENSHOT OF WINNERNAME.TS OUTPUT HERE***
 
