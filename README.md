@@ -11,13 +11,13 @@ Adam Czopp: [0xbe1...df4](https://sepolia.etherscan.io/address/0xbe124408de4a263
 
 ### Token Deployment
 
-The token, a mintable ERC20 with voting rights and roles, was deployed at [0xe5f...578](https://sepolia.etherscan.io/tx/0xe5fe97615b9509da6bf2bfaa5f7bc8a33598a802fa7b1a212766cf61f4aae578) on the Sepolia testnet. From this point, the deployer can mint and transfer tokens between other members of the group.
+The token, a mintable ERC20 with voting rights and roles, was deployed at [0x4A3...9A8](https://sepolia.etherscan.io/address/0x4A3f928B2909C33A8c27400F109f3C07FB5aE9A8) on the Sepolia testnet. From this point, the deployer can mint and transfer tokens between other members of the group.
 
 ### Token Minting
 
-Then, one MyToken (MTK) was minted by the deployer in transaction hash [0x76f...8ef](https://sepolia.etherscan.io/tx/0x76f9d583b2e99018b783d3f4943f00e220d596aff8fccf367830320007eeb8ef), to be split into four and transferred to the rest of the team:
+Then, one VoteToken (VTK) was minted by the deployer in transaction hash [0xcea...f59](https://sepolia.etherscan.io/tx/0xcea65fa47cc7f7ea7db14c2462d5cb310d5eff2a4b059038e294d66c85069f59), to be split into four and transferred to the rest of the team:
 
-![Screenshot 2023-08-13 at 08 27 05](https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/96599839/d506915c-f292-4c8e-8a8d-1c0baa62e13f)
+![Screenshot 2023-08-13 at 08 55 36](https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/96599839/21c3230c-f3c1-4184-bd8d-3a8a6005f093)
 
 ### Token Transfer
 
