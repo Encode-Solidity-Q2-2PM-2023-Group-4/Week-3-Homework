@@ -21,18 +21,32 @@ Then, one VoteToken (VTK) was minted by the deployer in transaction hash [0xcea.
 
 ### Token Transfer
 
-Next, a quarter of the minted supply was transferred to each team member, leaving everyone involved with 0.75 VTK:
+Next, a quarter of the minted supply was transferred to each team member, leaving everyone involved with 0.25 VTK:
 
 ![Screenshot 2023-08-13 at 11 54 10](https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/96599839/ddaaafc7-1497-426d-a9a6-f4259f7ac54e)
 
-### Ballot Deployment
+### Ballot Deployment/Self-delegation
 
-Following this, the tokenised ballot was finally deployed to the blockchain in transaction hash [0xaf3...eda](https://sepolia.etherscan.io/tx/0xaf34975d5efe17ce3f02ae31bbdfbc8314d47f351b559d419429d6941aea9eda), with proposals Ethereumm, Solana, Bitcoin, Dogecoin, Binance, Avalanche, Fantom and Polygon:
+Following this, the tokenised ballot was finally deployed to the blockchain in transaction hash [0x662...9a5](https://sepolia.etherscan.io/address/0x6623d414f729caaf17c393e5c0d4f4cd6a6839a5), with proposals Ethereum, Solana, Bitcoin, Dogecoin, Binance, Avalanche, Fantom and Polygon. Initially, at this point we ran into an issue, whereby the `targetBlockNum`, by which we reference voting power, was prior to any self-delegation which occured. However, in order to self-delegate, we needed to have a Ballot contract up and running, as this is where we accessed a user's voting power from. We were stuck in a loop and needed a fix, by which point we realised that, since the `.delegate` method was an `ERC20Votes` method, if we simply delegated via a *dummy* contract, we could then have real voting power for the actual contract (linked above). Reflecting on this, we could have simply made the snapshot take into account tokens at the time, as opposed to voting power, but thankfully se found a workaround in the time remaining.
 
-![Screenshot 2023-08-13 at 11 56 59](https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/96599839/31b33b62-fc28-4e58-b653-41089d930e6d)
+Following on from this discussion and realisation, we delegated using the dummy contract at [](), and then deployed [0x662...9a5](https://sepolia.etherscan.io/address/0x6623d414f729caaf17c393e5c0d4f4cd6a6839a5) as the actual ballot with which we would track votes:
 
-### Self-delegation
+![Screenshot 2023-08-13 at 19 05 20](https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/96599839/e97d89d2-95e4-4be3-a66b-e6da1e87f675)
+
+![Screenshot 2023-08-13 at 19 05 45](https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/96599839/cb6b4d02-6abd-439c-b91d-731d1d75572b)
 
 ### Voting
 
+Next we submitted our votes - here we realised that the voting power was given in decimal units, thanks to an unaccounteed conversion somewhere amongst the various scripts/contracts, and that the full amount with which we wished to vote would cause overflow errors. To combat this we tested 1400000000000000 decimal units and realised this did not cause any such issues, and were able to vote with this. Upon calling [`CurrentTally.ts`](scripts/CurrentTally.ts), we could check what these votes looked like:
+
+<img width="736" alt="Screenshot 2023-08-13 at 19 10 10" src="https://github.com/Encode-Solidity-Q2-2PM-2023-Group-4/Week-3-Homework/assets/96599839/1a1ba13b-2ed4-4ad7-ba41-c643326d0cfc">
+
 ### Winning Proposal
+
+### Appendix: Tests
+
+#### Voting before delegation
+
+### Voting power before delegation
+
+
